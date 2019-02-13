@@ -121,9 +121,6 @@ module.exports = override(
 重新启动测试
 ```
 yarn start
-
--------------------------------
-
 ```
 引入electron
 ```
