@@ -58,6 +58,10 @@ yarn add antd
 ```
 yarn add react-app-rewired --dev
 ```
+引入moment
+```
+yarn add moment
+```
 修改 package.json 里的启动配置
 ```Json
 "scripts": {
