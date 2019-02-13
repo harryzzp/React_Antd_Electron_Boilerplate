@@ -1,6 +1,24 @@
 # Gold Miner
 Goldminer3 Client
 
+# 运行
+下载代码
+```
+git clone https://github.com/harryzzp/miner.git
+```
+安装依赖
+```
+yarn
+```
+测试react
+```
+yarn start
+```
+测试electron
+```
+yarn estart
+```
+
 # 开发流程
 参考[Electron+React+Ant-Design 构建初始化应用](https://blog.csdn.net/yanlovehan/article/details/83067536)
 
@@ -160,3 +178,4 @@ function createWindow() {
     })
 }
 ```
+
