@@ -16,7 +16,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "estart": "electron .",
-    "package": "electron-packager ./ miner --overwrite --asar --platform=win32 --arch=x64 --prune=true --out=release-builds --ignore=\"(release-builds|public|src|package-lock.json|yarn.lock|.gitignore|README.md|config-overrides.js|node_modules)\""
+    "package": "electron-packager ./ miner --overwrite --asar --arch=x64 --prune=true --out=release-builds --ignore=\"(release-builds|public|src|package-lock.json|yarn.lock|.gitignore|README.md|config-overrides.js|node_modules)\""
   },
   "eslintConfig": {
     "extends": "react-app"
