@@ -29,7 +29,7 @@ yarn package
 ```
 
 # 开发流程
-本章节参考[Electron+React+Ant-Design 构建初始化应用](https://blog.csdn.net/yanlovehan/article/details/83067536)，除非想一步步安装，否则无须执行。
+本章节除非想一步步安装，否则无须执行。
 
 全局安装elctron，yarn和create-react-app
 ```
@@ -106,7 +106,7 @@ import React, { Component } from 'react';
 
   export default App;
 ```
-解决The "injectBabelPlugin" helper has been deprecated as of v2.0. You can use customize-cra plugins in replacement - https://github.com/arackaf/customize-cra#available-plugins问题 [antd中按需加载使用react-app-rewired报错](https://segmentfault.com/q/1010000017794269/a-1020000017860037)
+解决The "injectBabelPlugin" helper has been deprecated as of v2.0. You can use customize-cra plugins in replacement - https://github.com/arackaf/customize-cra#available-plugins问题 
 ```
 yarn add --dev customize-cra
 yarn add --dev less-loader
@@ -188,3 +188,6 @@ function createWindow() {
 }
 ```
 
+# 参考
+[Electron+React+Ant-Design 构建初始化应用](https://blog.csdn.net/yanlovehan/article/details/83067536)，
+[antd中按需加载使用react-app-rewired报错](https://segmentfault.com/q/1010000017794269/a-1020000017860037)
