@@ -1,7 +1,7 @@
 {
   "main": "main.js",
   "homepage": ".",
-  "DEV": true,
+  "DEV": false,
   "name": "miner",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +15,8 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
-    "estart": "electron ."
+    "estart": "electron .",
+    "package": "electron-packager ./ miner --overwrite --asar=true --platform=win32 --arch=x64 --prune=true --out=release-builds"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,6 +31,7 @@
     "babel-plugin-import": "^1.11.0",
     "customize-cra": "^0.2.11",
     "electron": "^4.0.4",
+    "electron-packager": "^13.0.1",
     "less-loader": "^4.1.0",
     "react-app-rewired": "^2.1.0"
   }

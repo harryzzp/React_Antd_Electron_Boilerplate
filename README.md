@@ -22,6 +22,11 @@ yarn build
 ```
 yarn estart
 ```
+# 打包发布
+使用electron-packager打包发布
+```
+yarn package
+```
 
 # 开发流程
 本章节参考[Electron+React+Ant-Design 构建初始化应用](https://blog.csdn.net/yanlovehan/article/details/83067536)，除非想一步步安装，否则无须执行。
