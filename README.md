@@ -14,6 +14,10 @@ yarn
 ```
 yarn start
 ```
+打包react
+```
+yarn build
+```
 测试electron
 ```
 yarn estart
