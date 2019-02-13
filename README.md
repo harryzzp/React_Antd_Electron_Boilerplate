@@ -1,5 +1,5 @@
 # Miner
-Goldminer3 Client
+Miner桌面客户端
 
 # 安装运行
 下载代码
