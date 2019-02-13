@@ -14,16 +14,21 @@ yarn
 ```
 yarn start
 ```
-打包react
-```
-yarn build
-```
+
 测试electron
 ```
 yarn estart
 ```
 # 打包发布
-使用electron-packager打包发布
+开发时为便于调试开启DEV模式，调整package.json中的参数为false
+```Json
+  "DEV":false,
+```
+打包react
+```
+yarn build
+```
+使用webpack生成的build目录文件，使用electron-packager打包发布
 ```
 yarn package
 ```
@@ -56,16 +61,13 @@ yarn add react-app-rewired --dev
 修改 package.json 里的启动配置
 ```Json
 "scripts": {
--   "start": "react-scripts start",
-+   "start": "react-app-rewired start",
--   "build": "react-scripts build",
-+   "build": "react-app-rewired build",
--   "test": "react-scripts test --env=jsdom",
-+   "test": "react-app-rewired test --env=jsdom",
+   "start": "react-app-rewired start",
+   "build": "react-app-rewired build",
+   "test": "react-app-rewired test --env=jsdom",
 }
 ```
 然后在项目根目录创建一个 config-overrides.js 用于修改默认配置
-```
+```JavaScript
 module.exports = function override(config, env) {
   // do stuff with the webpack config...
   return config;
@@ -186,6 +188,14 @@ function createWindow() {
         win = null
     })
 }
+```
+打包react
+```
+yarn build
+```
+测试electron
+```
+yarn estart
 ```
 
 # 参考
