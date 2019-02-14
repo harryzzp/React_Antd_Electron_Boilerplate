@@ -58,9 +58,13 @@ yarn add antd
 ```
 yarn add react-app-rewired --dev
 ```
-引入moment
+引入moment时间控件
 ```
 yarn add moment
+```
+引入react-router-dom路由,支持页面局部刷新
+```
+yarn add react-router-dom
 ```
 修改 package.json 里的启动配置
 ```Json
