@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
 const path = require('path')
 const url = require('url')
 const pkg = require('./package.json')
@@ -7,7 +7,8 @@ const pkg = require('./package.json')
 let win
 function createWindow() {
     // 创建浏览器窗口。 
-    win = new BrowserWindow({ width: 800, height: 600 })
+    win = new BrowserWindow({ width: 800, height: 600, frame: true })
+    Menu.setApplicationMenu(null);
     // 然后加载应用的 index.html。 
     // package中的DEV为true时，开启调试窗口。为false时使用编译发布版本 
     if (pkg.DEV) {
@@ -33,6 +34,7 @@ function createWindow() {
 // 创建浏览器窗口时，调用这个函数。 
 // 部分 API 在 ready 事件触发后才能使用。 
 app.on('ready', createWindow)
+
 // 当全部窗口关闭时退出。 
 app.on('window-all-closed', () => {
     // 在 macOS 上，除非用户用 Cmd + Q 确定地退出， 
