@@ -33,7 +33,7 @@ class App extends Component {
             </Header>
             <Content style={{ padding: '0 5px' }}>
                 <Layout style={{ padding: '24px 0', background: '#fff' }}>
-                    <Sider width={200} style={{ background: '#fff', position: 'fixed' }}>
+                    <Sider width={200} style={{ background: '#fff',height: '70vh', position: 'fixed', overflow: 'auto' }}>
                         <Menu mode="inline" defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} style={{ height: '100%' }}>
                             <SubMenu key="sub1" title={<span>
                                 <Icon type="user" />subnav 1</span>}>
