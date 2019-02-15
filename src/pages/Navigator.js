@@ -25,7 +25,7 @@ const PandaIcon = props => (
 class Navigator extends Component{
 
     state = {
-        current: 'mail',
+        current: 'dashboard',
     }
 
     handleClick = (e) => {
@@ -40,7 +40,8 @@ class Navigator extends Component{
             <div>
                 <Row>
                     <Col span={23} push={1}>
-                        <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+                        <Menu theme="dark" style={{ lineHeight: '64px' }}
+                         onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
                             <Menu.Item key="dashboard"><Icon type="dashboard" />仪表盘</Menu.Item>
                             <SubMenu title={<span className="submenu-title-wrapper"><Icon type="money-collect" />交易</span>}>
                                 <Menu.Item key="trade:1"><Icon type="user" />基本交易</Menu.Item>
