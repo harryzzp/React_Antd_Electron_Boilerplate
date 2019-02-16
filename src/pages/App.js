@@ -38,9 +38,9 @@ class App extends Component {
                       </Menu>
                   </Header>
               </Affix>
-              <Content style={{ padding: '0 50px' }}>
-                  <Layout style={{ padding: '24px 0', background: '#fff' }}>
-                      <Sider width={200} style={{ background: '#fff', overflow: 'auto', height: '70vh' }}>
+              <Content style={{ padding: '0 5px' }}>
+                  <Layout style={{ padding: '5px 0', background: '#fff' }}>
+                      <Sider width={200} style={{ background: '#fff', overflow: 'auto', height: '80vh' }}>
                           <Menu mode="inline" defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} style={{ height: '100%' }}>
                               <SubMenu key="sub1" title={<span>
                                   <Icon type="user" />股票</span>}>
@@ -70,28 +70,24 @@ class App extends Component {
                               </SubMenu>
                           </Menu>
                       </Sider>
-                      <Content style={{ padding: '0 24px', height:'70vh' }}>
+                      <Content style={{ padding: '0 5px', height:'80vh' }}>
                           Content
                       </Content>
                   </Layout>
               </Content>
-              <Footer style={{height:'30vh'}}>
-                  <Row gutter={16}>
-                      <Col span={4}>
-                      <Card>
-                          <Statistic title="Active" value={11.28} precision={2} valueStyle={{ color: '#3f8600' }} prefix={<Icon
+              <Footer style={{height:'12vh'}}>
+                  <Row gutter={16} >
+                      <Col span={3}>
+                          <Statistic title="上证指数" value={2682.39} precision={2} valueStyle={{ color: '#cf1322' }} prefix={<Icon
                               type="arrow-up" />}
                           suffix="%"
                           />
-                      </Card>
                       </Col>
-                      <Col span={4}>
-                      <Card>
-                          <Statistic title="Idle" value={9.3} precision={2} valueStyle={{ color: '#cf1322' }} prefix={<Icon
+                      <Col span={3}>
+                          <Statistic title="深圳成指" value={82125.63} precision={2} valueStyle={{ color: '#3f8600' }} prefix={<Icon
                               type="arrow-down" />}
                           suffix="%"
                           />
-                      </Card>
                       </Col>
                       <Col span={8}>
                       <Statistic title="Active Users" value={112893} />
