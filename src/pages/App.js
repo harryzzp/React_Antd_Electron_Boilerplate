@@ -11,7 +11,6 @@ class App extends Component {
   render() {
     return (
       <div>
-          <Layout>
                   <Header className="header">
                       <div className="logo" />
                       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ lineHeight: '64px' }}>
@@ -63,7 +62,6 @@ class App extends Component {
                   </Layout>
               </Content>
               
-          </Layout>
       </div>
     );
   }
