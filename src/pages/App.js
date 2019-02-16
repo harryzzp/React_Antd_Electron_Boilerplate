@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
 
-import {
-  Layout, Menu, Icon, Affix, Statistic, Row, Col, Card
-} from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 import 'antd/dist/antd.css';
 import './App.css';
 
-//加载自定义组件
-import Navigator from './Navigator';
-import Dashboard from './Dashboard';
-
 const { SubMenu } = Menu;
-const { Header, Content, Sider, Footer } = Layout;
-
-const Countdown = Statistic.Countdown;
-const deadline = Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30; // Moment is also OK
-
+const { Header, Content, Sider } = Layout;
 
 class App extends Component {
 
@@ -25,9 +15,9 @@ class App extends Component {
           <Layout>
                   <Header className="header">
                       <div className="logo" />
-                      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ lineHeight: '64px' }}>
+                      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ lineHeight: '64px' }}>
                           <Menu.Item key="1">
-                              <Icon type="dashboard" />交易</Menu.Item>
+                              <Icon type="trade" />交易</Menu.Item>
                           <Menu.Item key="2">
                               <Icon type="form" />策略</Menu.Item>
                           <Menu.Item key="3">

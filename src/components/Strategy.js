@@ -8,7 +8,7 @@ const TabPane = Tabs.TabPane;
 
 moment.locale('zh-cn');
 
-class Dashboard extends Component {
+class Strategy extends Component {
     state = {
         date: null
       };
@@ -67,4 +67,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default Strategy;
