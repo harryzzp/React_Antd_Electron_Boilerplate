@@ -23,7 +23,6 @@ class App extends Component {
     return (
       <div>
           <Layout>
-              <Affix>
                   <Header className="header">
                       <div className="logo" />
                       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} style={{ lineHeight: '64px' }}>
@@ -37,10 +36,9 @@ class App extends Component {
                               <Icon type="setting" />配置</Menu.Item>
                       </Menu>
                   </Header>
-              </Affix>
               <Content style={{ padding: '0 5px' }}>
                   <Layout style={{ padding: '5px 0', background: '#fff' }}>
-                      <Sider width={200} style={{ background: '#fff', overflow: 'auto', height: '80vh' }}>
+                      <Sider width={200} style={{ background: '#fff', overflow: 'auto', height: '100vh', position:"fixed", left:0 }}>
                           <Menu mode="inline" defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} style={{ height: '100%' }}>
                               <SubMenu key="sub1" title={<span>
                                   <Icon type="user" />股票</span>}>
@@ -70,33 +68,12 @@ class App extends Component {
                               </SubMenu>
                           </Menu>
                       </Sider>
-                      <Content style={{ padding: '0 5px', height:'80vh' }}>
+                      <Content style={{ padding: '0 5px', height:'100vh', position:"fixed", left:200 }}>
                           Content
                       </Content>
                   </Layout>
               </Content>
-              <Footer style={{height:'12vh'}}>
-                  <Row gutter={16} >
-                      <Col span={3}>
-                          <Statistic title="上证指数" value={2682.39} precision={2} valueStyle={{ color: '#cf1322' }} prefix={<Icon
-                              type="arrow-up" />}
-                          suffix="%"
-                          />
-                      </Col>
-                      <Col span={3}>
-                          <Statistic title="深圳成指" value={82125.63} precision={2} valueStyle={{ color: '#3f8600' }} prefix={<Icon
-                              type="arrow-down" />}
-                          suffix="%"
-                          />
-                      </Col>
-                      <Col span={8}>
-                      <Statistic title="Active Users" value={112893} />
-                      </Col>
-                      <Col span={8}>
-                      <Countdown title="Countdown" value={deadline} />
-                      </Col>
-                  </Row>
-              </Footer>
+              
           </Layout>
       </div>
     );
