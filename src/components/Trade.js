@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import 'antd/dist/antd.css';
 
@@ -6,13 +6,11 @@ import 'antd/dist/antd.css';
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
 
-class Trade extends Component {
-  render() {
-    return (
+const Trade = () => (
       <div>
         <Content style={{ padding: '0 5px' }}>
           <Layout style={{ padding: '5px 0', background: '#fff' }}>
-            <Sider width={200} style={{ background: '#fff', overflow: 'auto', height: '100vh', position: "fixed", left: 0 }}>
+            <Sider width={200} style={{ background: '#fff', overflow: 'auto', height: '90vh', position: "fixed", left: 0 }}>
               <Menu mode="inline" defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} style={{ height: '100%' }}>
                 <SubMenu key="sub1" title={<span>
                   <Icon type="user" />股票</span>}>
@@ -39,17 +37,17 @@ class Trade extends Component {
                   <Icon type="notification" />基金</span>}>
                   <Menu.Item key="13">FOF</Menu.Item>
                   <Menu.Item key="14">MOM</Menu.Item>
+                  <Menu.Item key="15">MOM</Menu.Item>
+                  <Menu.Item key="16">MOM</Menu.Item>
                 </SubMenu>
               </Menu>
             </Sider>
-            <Content style={{ padding: '0 5px', height: '100vh', position: "fixed", left: 200 }}>
+            <Content style={{ padding: '0 5px', height: '90vh', position: "fixed", left: 200 }}>
               Content
-                      </Content>
+            </Content>
           </Layout>
         </Content>
       </div>
-    );
-  }
-}
+    )
 
 export default Trade;
