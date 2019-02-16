@@ -5,7 +5,7 @@ import './index.css';
 import 'moment/locale/zh-cn';
 import * as serviceWorker from './serviceWorker';
 
-import { MainRouter } from './pages/router';
+import { MainRouter } from './components/router';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<MainRouter />, document.getElementById('root'));

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { Layout, Menu, Icon } from 'antd';
 import 'antd/dist/antd.css';
 import './App.css';
@@ -17,7 +16,7 @@ class App extends Component {
                       <div className="logo" />
                       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} style={{ lineHeight: '64px' }}>
                           <Menu.Item key="1">
-                              <Icon type="trade" />交易</Menu.Item>
+                              <Icon type="dashboard" />交易</Menu.Item>
                           <Menu.Item key="2">
                               <Icon type="form" />策略</Menu.Item>
                           <Menu.Item key="3">
