@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Layout, Menu, Icon } from 'antd';
 import 'antd/dist/antd.css';
 
@@ -44,6 +45,7 @@ const Trade = () => (
             </Sider>
             <Content style={{ padding: '0 5px', height: '90vh', position: "fixed", left: 200 }}>
               Content
+              <Link to='/'>Back</Link>
             </Content>
           </Layout>
         </Content>

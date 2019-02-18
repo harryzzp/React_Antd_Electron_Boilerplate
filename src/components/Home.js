@@ -22,7 +22,7 @@ class Home extends Component {
 
     return (
       <div style={{ textAlign: "center", marginTop: "64px" }}>
-        <h1>欢迎来到量化联盟！</h1>
+        <h1>Welcome to React Algorithm Trading System!</h1>
         <div>
           {hits.map(hit =>
             <div key={hit.objectID}>
