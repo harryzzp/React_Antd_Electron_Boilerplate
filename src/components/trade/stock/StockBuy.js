@@ -70,11 +70,7 @@ class StockBuy extends Component {
         <Row gutter={10} style={{ width: "1000px" }}>
           <Col span={24}>
           <Tag size="small" color="blue">账户资金</Tag>
-            {/* <Tabs size={"small"} defaultActiveKey="1">
-              <TabPane tab="Tab 1" key="1"> */}
-                <Table size={"small"} pagination={false} columns={columns} dataSource={data} scroll={{ x: 1300, y: 60}} />
-              {/* </TabPane>
-            </Tabs> */}
+            <Table size={"small"} pagination={false} columns={columns} dataSource={data} scroll={{ x: 1300, y: 60}} />
           </Col>
         </Row>
         <Row gutter={10} style={{ width: "1000px", height: "422px" }}>
