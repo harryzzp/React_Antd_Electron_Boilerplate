@@ -26,7 +26,7 @@ class Home extends Component {
   componentDidMount() {
     fetch(API + DEFAULT_QUERY)
       .then(response => response.json())
-      .then(data => this.setState({ hits: data.hits }))
+      .then(data => this.setState({ hits: data.hits, isFetching: false }))
       .catch(e => console.log(e))
   }
 
