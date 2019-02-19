@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Trade from './trade/Trade';
-import Strategy from './strategy/Strategy';
-import Gateway from './gateway/Gateway';
-import Home from './Home';
+import Strategy from '../components/strategy/Strategy';
+import Gateway from '../components/gateway/Gateway';
+import Home from '../components/Home';
 
 const Main = () => (
   <main>

@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import './App.css';
 import Navigator from '../components/Navigator';
-import Main from '../components/Main';
+import Main from './Main';
 
 const App = () => (
     <div>

@@ -1,50 +1,9 @@
 import React, { Component } from "react";
-
 import "antd/dist/antd.css";
-import { Row, Col, Table, Tabs } from "antd";
+import { Row, Col, Table, Tabs, Tag } from "antd";
 
 const TabPane = Tabs.TabPane;
 
-const columns = [
-  {
-    title: 'Full Name', width: 100, dataIndex: 'name', key: 'name', fixed: 'left',
-  },
-  {
-    title: 'Age', width: 100, dataIndex: 'age', key: 'age', fixed: 'left',
-  },
-  {
-    title: 'Column 1', dataIndex: 'address', key: '1', width: 150,
-  },
-  {
-    title: 'Column 2', dataIndex: 'address', key: '2', width: 150,
-  },
-  {
-    title: 'Column 3', dataIndex: 'address', key: '3', width: 150,
-  },
-  {
-    title: 'Column 4', dataIndex: 'address', key: '4', width: 150,
-  },
-  {
-    title: 'Column 5', dataIndex: 'address', key: '5', width: 150,
-  },
-  {
-    title: 'Column 6', dataIndex: 'address', key: '6', width: 150,
-  },
-  {
-    title: 'Column 7', dataIndex: 'address', key: '7', width: 150,
-  },
-  { title: 'Column 8', dataIndex: 'address', key: '8' },
-];
-
-const data = [];
-for (let i = 0; i < 2; i++) {
-  data.push({
-    key: i,
-    name: `Edrward ${i}`,
-    age: 32,
-    address: `London Park no. ${i}`,
-  });
-}
 
 class StockBuy extends Component {
 
@@ -52,22 +11,70 @@ class StockBuy extends Component {
     super(props);
 
     this.state = {
+      columns: [],
       data: [],
-      isFetching: true
     };
   }
 
+  fetchTableData() {
+    const tempData = [{
+      key: '1',
+      name: 'John Brown',
+      age: 32,
+      address: 'New York',
+    },
+    {
+      key: '2',
+      name: 'Jim Green',
+      age: 40,
+      address: 'London',
+    },
+    {
+      key: '3',
+      name: 'James White',
+      age: 48,
+      address: 'Shanghai',
+    }]
+    this.setState({
+      columns: [
+        {
+          title: 'Full Name', width: 100, dataIndex: 'name', key: 'name', fixed: 'left',
+        },
+        {
+          title: 'Age', width: 100, dataIndex: 'age', key: 'age', fixed: 'left',
+        },
+        { title: 'Column 1', dataIndex: 'address', key: '1' },
+        { title: 'Column 2', dataIndex: 'address', key: '2' },
+        { title: 'Column 3', dataIndex: 'address', key: '3' },
+        { title: 'Column 4', dataIndex: 'address', key: '4' },
+        { title: 'Column 5', dataIndex: 'address', key: '5' },
+        { title: 'Column 6', dataIndex: 'address', key: '6' },
+        { title: 'Column 7', dataIndex: 'address', key: '7' },
+        { title: 'Column 8', dataIndex: 'address', key: '8' },
+        { title: 'Column 9', dataIndex: 'address', key: '9' },
+        { title: 'Column 10', dataIndex: 'address', key: '10' },
+      ],
+      data: tempData,
+    });
+
+  }
+
+  componentDidMount() {
+    this.fetchTableData();
+  }
+
   render() {
-    const { hits, isFetching } = this.state;
+    const { columns, data } = this.state;
     return (
       <div>
-        <Row gutter={10} style={{ width: "1700px", height: "100px" }}>
+        <Row gutter={10} style={{ width: "1000px" }}>
           <Col span={24}>
-            <Tabs size={"small"} defaultActiveKey="1">
-              <TabPane tab="Tab 1" key="1">
-                <Table pagination={false} size={'small'} columns={columns} dataSource={data} scroll={{ x: 1700, y: 100 }} />
-              </TabPane>
-            </Tabs>
+          <Tag size="small" color="blue">账户资金</Tag>
+            {/* <Tabs size={"small"} defaultActiveKey="1">
+              <TabPane tab="Tab 1" key="1"> */}
+                <Table size={"small"} pagination={false} columns={columns} dataSource={data} scroll={{ x: 1300, y: 60}} />
+              {/* </TabPane>
+            </Tabs> */}
           </Col>
         </Row>
         <Row gutter={10} style={{ width: "1700px", height: "622px" }}>
