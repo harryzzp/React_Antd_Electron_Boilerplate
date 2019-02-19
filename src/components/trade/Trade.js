@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { Layout, Menu, Icon } from 'antd';
 import 'antd/dist/antd.css';
+import TradePanel from './TradePanel';
 
 
 const { SubMenu } = Menu;
@@ -15,17 +16,15 @@ const Trade = () => (
               <Menu mode="inline" defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} style={{ height: '100%' }}>
                 <SubMenu key="sub1" title={<span>
                   <Icon type="user" />股票</span>}>
-                  <Menu.Item key="1">个股闪电手</Menu.Item>
-                  <Menu.Item key="2">组合闪电手</Menu.Item>
-                  <Menu.Item key="3">触发条件策略</Menu.Item>
-                  <Menu.Item key="4">自动交易策略</Menu.Item>
-                  <Menu.Item key="5">批量新股申购</Menu.Item>
+                  <Menu.Item key="1"><Link to='/trade/stock/buy'>买入</Link></Menu.Item>
+                  <Menu.Item key="2"><Link to='/trade/stock/sell'>卖出</Link></Menu.Item>
+                  <Menu.Item key="3"><Link to='/trade/stock/purchase'>申购</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title={<span>
                   <Icon type="laptop" />期货</span>}>
-                  <Menu.Item key="6">option6</Menu.Item>
-                  <Menu.Item key="7">option7</Menu.Item>
-                  <Menu.Item key="8">option8</Menu.Item>
+                  <Menu.Item key="1">option6</Menu.Item>
+                  <Menu.Item key="2">option7</Menu.Item>
+                  <Menu.Item key="3">option8</Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub3" title={<span>
                   <Icon type="notification" />期权</span>}>
@@ -44,8 +43,7 @@ const Trade = () => (
               </Menu>
             </Sider>
             <Content style={{ padding: '0 5px', height: '90vh', position: "fixed", left: 200 }}>
-              Content
-              <Link to='/'>Back</Link>
+              <TradePanel />
             </Content>
           </Layout>
         </Content>
