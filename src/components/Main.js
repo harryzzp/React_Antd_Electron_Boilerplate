@@ -8,13 +8,11 @@ import Home from './Home';
 const Main = () => (
   <main>
     <Switch>
-      <Route exact path="/">
-        <Redirect to="/home" />
-      </Route>
-      <Route path="/home" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route path="/trade" component={Trade} />
       <Route path="/strategy" component={Strategy} />
       <Route path="/gateway" component={Gateway} />
+      <Redirect to="/" />
     </Switch>
   </main>
 )
