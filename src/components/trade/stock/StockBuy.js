@@ -77,7 +77,7 @@ class StockBuy extends Component {
             </Tabs> */}
           </Col>
         </Row>
-        <Row gutter={10} style={{ width: "1700px", height: "622px" }}>
+        <Row gutter={10} style={{ width: "1000px", height: "422px" }}>
           <Col span={18} push={6}>
             col-18 col-push-6
           </Col>
@@ -85,7 +85,7 @@ class StockBuy extends Component {
             col-6 col-pull-18
           </Col>
         </Row>
-        <Row gutter={10} style={{ width: "1700px", height: "150px" }}>
+        <Row gutter={10} style={{ width: "1000px", height: "150px" }}>
           <Col span={24}>
             <Tabs size={"small"} defaultActiveKey="2">
               <TabPane tab="Tab 1" key="1">

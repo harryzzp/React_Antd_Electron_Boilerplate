@@ -42,7 +42,7 @@ const Trade = () => (
                 </SubMenu>
               </Menu>
             </Sider>
-            <Content style={{ padding: '0 5px', height: '90vh', position: "fixed", left: 200 }}>
+            <Content style={{ padding: '0 5px', height: '80vh', position: "fixed", left: 200 }}>
               <TradePanel />
             </Content>
           </Layout>
