@@ -69,7 +69,7 @@ export default class AccountAssetTable extends Component {
   render() {
     const { columns, data } = this.state;
     return (
-      <Table
+      <Table bordered
         size={'small'}
         pagination={false}
         columns={columns}
