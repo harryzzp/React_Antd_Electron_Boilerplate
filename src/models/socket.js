@@ -1,52 +1,54 @@
-import {socketListen,socketStatus} from '@/services/socketApi';
+import { socketListen, socketStatus } from '@/services/socketApi';
 import { notification } from 'antd';
 
 export default {
   namespace: 'socket',
 
-  state: {
-  },
-
+  state: {},
 
   subscriptions: {
-
-    setupHistory ({ dispatch, history}) {
-      history.listen((location) => {
-        if(!socketStatus()&&location.pathname.indexOf('user/login')<0&&sessionStorage.getItem('token') !== undefined&&sessionStorage.getItem('token') !==null){
-          socketListen((data)=> {
+    setupHistory({ dispatch, history }) {
+      history.listen(location => {
+        if (
+          !socketStatus() &&
+          location.pathname.indexOf('user/login') < 0 &&
+          sessionStorage.getItem('token') !== undefined &&
+          sessionStorage.getItem('token') !== null
+        ) {
+          socketListen(data => {
             switch (data.type) {
               case 'E_TICKS|':
                 dispatch({
-                  type: 'tick/updateTicks', 
-                  payload: data.payload,
+                  type: 'tick/updateTicks',
+                  payload: data.payload
                 });
                 dispatch({
-                  type: 'basicTradeForm/updateTick', 
-                  payload: data.payload,
+                  type: 'basicTradeForm/updateTick',
+                  payload: data.payload
                 });
                 break;
               case 'disconnect':
                 notification.error({
                   message: `SocketIO`,
-                  description: "连接已断开",
+                  description: '连接已断开'
                 });
                 dispatch({
-                  type: 'login/logout',
+                  type: 'login/logout'
                 });
                 break;
               case 'connect_failed':
                 notification.error({
                   message: `SocketIO`,
-                  description: "建立连接失败",
+                  description: '建立连接失败'
                 });
                 dispatch({
-                  type: 'login/logout',
+                  type: 'login/logout'
                 });
                 break;
               case 'connect':
                 notification.info({
                   message: `SocketIO`,
-                  description: "已建立连接"
+                  description: '已建立连接'
                 });
                 break;
               case 'connecting':
@@ -54,29 +56,28 @@ export default {
               case 'error':
                 notification.error({
                   message: `SocketIO`,
-                  description: "错误",
+                  description: '错误'
                 });
                 dispatch({
-                  type: 'login/logout',
+                  type: 'login/logout'
                 });
                 break;
               case 'connect_error':
                 notification.error({
                   message: `SocketIO`,
-                  description: "建立连接错误",
+                  description: '建立连接错误'
                 });
                 dispatch({
-                  type: 'login/logout',
+                  type: 'login/logout'
                 });
 
                 break;
               default:
-                  break;
+                break;
             }
-          })
+          });
         }
-      })
-    },
-
-  },
+      });
+    }
+  }
 };

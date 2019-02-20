@@ -13,6 +13,6 @@ const TradePanel = () => (
       <Redirect to="/trade/stock/buy" />
     </Switch>
   </main>
-)
+);
 
 export default TradePanel;

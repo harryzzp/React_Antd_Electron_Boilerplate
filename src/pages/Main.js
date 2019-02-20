@@ -15,6 +15,6 @@ const Main = () => (
       <Redirect to="/" />
     </Switch>
   </main>
-)
+);
 
 export default Main;

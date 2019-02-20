@@ -5,10 +5,10 @@ import Navigator from '../components/Navigator';
 import Main from './Main';
 
 const App = () => (
-    <div>
-        <Navigator />
-        <Main />
-    </div>
-)
+  <div>
+    <Navigator />
+    <Main />
+  </div>
+);
 
 export default App;
