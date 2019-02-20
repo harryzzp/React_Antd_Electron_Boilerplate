@@ -16,9 +16,9 @@ const Trade = () => (
               <Menu mode="inline" defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} style={{ height: '100%' }}>
                 <SubMenu key="sub1" title={<span>
                   <Icon type="user" />股票</span>}>
-                  <Menu.Item key="1"><Link to='/trade/stock/buy'>买入</Link></Menu.Item>
-                  <Menu.Item key="2"><Link to='/trade/stock/sell'>卖出</Link></Menu.Item>
-                  <Menu.Item key="3"><Link to='/trade/stock/purchase'>申购</Link></Menu.Item>
+                  <Menu.Item key="1"><Link to='/trade/stock/basic'>基本交易</Link></Menu.Item>
+                  <Menu.Item key="2"><Link to='/trade/stock/algorithm'>算法交易</Link></Menu.Item>
+                  <Menu.Item key="3"><Link to='/trade/stock/strategy'>策略交易</Link></Menu.Item>
                 </SubMenu>
                 <SubMenu key="sub2" title={<span>
                   <Icon type="laptop" />期货</span>}>

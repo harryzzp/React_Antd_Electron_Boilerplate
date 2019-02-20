@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import { Row, Col, Tabs } from 'antd';
-import StockOrderPane from './StockOrderPane';
-import AccountAssetPane from './AccountAssetPane';
+import StockOrderPane from './StockBasicOrderPane';
+import AccountAssetPane from '../account/AccountAssetPane';
 
 const TabPane = Tabs.TabPane;
 
-class StockBuy extends Component {
+class StockBasic extends Component {
   render() {
     return (
       <div>
@@ -22,9 +22,9 @@ class StockBuy extends Component {
         </Row>
         <Row gutter={10} style={{ width: '1000px', height: '150px' }}>
           <Col span={24}>
-            <Tabs size={'small'} defaultActiveKey="2">
+            <Tabs size={'small'} defaultActiveKey="1">
               <TabPane tab="Tab 1" key="1">
-                Content of Tab Pane 1
+                基本交易
               </TabPane>
               <TabPane tab="Tab 2" key="2">
                 Content of Tab Pane 2
@@ -40,4 +40,4 @@ class StockBuy extends Component {
   }
 }
 
-export default StockBuy;
+export default StockBasic;

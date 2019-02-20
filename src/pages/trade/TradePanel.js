@@ -1,16 +1,16 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import StockBuy from '../../components/trade/stock/StockBuy';
-import StockSell from '../../components/trade/stock/StockSell';
-import StockPurchase from '../../components/trade/stock/StockPurchase';
+import StockBasic from '../../components/trade/stock/basic/StockBasic';
+import StockAlgorithm from '../../components/trade/stock/algorithm/StockAlgorithm';
+import StockStrategy from '../../components/trade/stock/strategy/StockStrategy';
 
 const TradePanel = () => (
   <main>
     <Switch>
-      <Route path="/trade/stock/buy" component={StockBuy} />
-      <Route path="/trade/stock/sell" component={StockSell} />
-      <Route path="/trade/stock/purchase" component={StockPurchase} />
-      <Redirect to="/trade/stock/buy" />
+      <Route path="/trade/stock/basic" component={StockBasic} />
+      <Route path="/trade/stock/algorithm" component={StockAlgorithm} />
+      <Route path="/trade/stock/strategy" component={StockStrategy} />
+      <Redirect to="/trade/stock/basic" />
     </Switch>
   </main>
 );

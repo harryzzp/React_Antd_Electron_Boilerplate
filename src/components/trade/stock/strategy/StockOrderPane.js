@@ -2,22 +2,26 @@ import React, { Component } from 'react';
 import 'antd/dist/antd.css';
 import './StockOrderPane.css';
 import { Card } from 'antd';
-import AccountAssetTable from './AccountAssetTable';
 
-const tabList = [
+const tabListNoTitle = [
   {
-    key: 'accountAssetPane',
-    tab: '账号资金'
+    key: 'stockOrderPane',
+    tab: '下单面板'
+  },
+  {
+    key: 'futureHedge',
+    tab: '期货套利'
   }
 ];
 
 const contentListNoTitle = {
-  accountAssetPane: <AccountAssetTable />
+  stockOrderPane: <p>stockOrderPane content</p>,
+  app: <p>app content</p>
 };
 
-export default class AccountAssetPane extends Component {
+export default class StockOrderPane extends Component {
   state = {
-    noTitleKey: 'accountAssetPane'
+    noTitleKey: 'stockOrderPane'
   };
   onTabChange = (key, type) => {
     console.log(key, type);
@@ -30,7 +34,7 @@ export default class AccountAssetPane extends Component {
           size={'small'}
           headStyle={{ color: 'red' }}
           style={{ width: '100%' }}
-          tabList={tabList}
+          tabList={tabListNoTitle}
           activeTabKey={this.state.noTitleKey}
           onTabChange={key => {
             this.onTabChange(key, 'noTitleKey');
