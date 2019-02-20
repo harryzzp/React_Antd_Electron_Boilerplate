@@ -22,14 +22,14 @@ class StockBasic extends Component {
         </Row>
         <Row gutter={10} style={{ width: '1000px', height: '150px' }}>
           <Col span={24}>
-            <Tabs size={'small'} defaultActiveKey="1">
-              <TabPane tab="Tab 1" key="1">
+            <Tabs size={'small'} defaultActiveKey='1'>
+              <TabPane tab='Tab 1' key='1'>
                 基本交易
               </TabPane>
-              <TabPane tab="Tab 2" key="2">
+              <TabPane tab='Tab 2' key='2'>
                 Content of Tab Pane 2
               </TabPane>
-              <TabPane tab="Tab 3" key="3">
+              <TabPane tab='Tab 3' key='3'>
                 Content of Tab Pane 3
               </TabPane>
             </Tabs>

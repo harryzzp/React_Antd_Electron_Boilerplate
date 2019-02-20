@@ -1,8 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Form, Input, Button, Radio } from 'antd';
+import React, { Component } from 'react';
+import { Form, Input, Button } from 'antd';
 
-class StockBasicOrderForm extends React.Component {
+class StockBasicOrderForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,40 +15,33 @@ class StockBasicOrderForm extends React.Component {
 
   render() {
     const { formLayout } = this.state;
-    const formItemLayout =
-      formLayout === 'horizontal'
-        ? {
-            labelCol: { span: 4 },
-            wrapperCol: { span: 14 }
-          }
-        : null;
-    const buttonItemLayout =
-      formLayout === 'horizontal'
-        ? {
-            wrapperCol: { span: 14, offset: 4 }
-          }
-        : null;
+    const formItemLayout = {
+      labelCol: { span: 2 },
+      wrapperCol: { span: 4}
+    };
+    const buttonItemLayout = {
+      wrapperCol: { span: 4, offset: 4 }
+    };
     return (
       <div>
         <Form layout={formLayout}>
-          <Form.Item label="Form Layout" {...formItemLayout}>
-            <Radio.Group
-              defaultValue="horizontal"
-              onChange={this.handleFormLayoutChange}
-            >
-              <Radio.Button value="horizontal">Horizontal</Radio.Button>
-              <Radio.Button value="vertical">Vertical</Radio.Button>
-              <Radio.Button value="inline">Inline</Radio.Button>
-            </Radio.Group>
+          <Form.Item label='证券代码' {...formItemLayout}>
+            <Input placeholder='' />
           </Form.Item>
-          <Form.Item label="Field A" {...formItemLayout}>
-            <Input placeholder="input placeholder" />
+          <Form.Item label='证券名称' {...formItemLayout}>
+            <Input placeholder='' />
           </Form.Item>
-          <Form.Item label="Field B" {...formItemLayout}>
-            <Input placeholder="input placeholder" />
+          <Form.Item label='买入价格' {...formItemLayout}>
+            <Input placeholder='' />
+          </Form.Item>
+          <Form.Item label='最大可买' {...formItemLayout}>
+            <Input placeholder='' />
+          </Form.Item>
+          <Form.Item label='买入数量' {...formItemLayout}>
+            <Input placeholder='' />
           </Form.Item>
           <Form.Item {...buttonItemLayout}>
-            <Button type="primary">Submit</Button>
+            <Button type='primary'>下单</Button>
           </Form.Item>
         </Form>
       </div>
@@ -57,4 +49,4 @@ class StockBasicOrderForm extends React.Component {
   }
 }
 
-ReactDOM.render(<StockBasicOrderForm />, document.getElementById('StockBasicOrderBuy'));
+export default StockBasicOrderForm;

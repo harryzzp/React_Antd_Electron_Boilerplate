@@ -39,7 +39,7 @@ class Home extends Component {
           <p>{isFetching ? 'Redux posts is loading ...' : ''}</p>
           {hits.map(hit => (
             <div key={hit.objectID}>
-              <a href={hit.url} target="_blank" rel="noopener noreferrer">
+              <a href={hit.url} target='_blank' rel='noopener noreferrer'>
                 {hit.title}
               </a>
             </div>

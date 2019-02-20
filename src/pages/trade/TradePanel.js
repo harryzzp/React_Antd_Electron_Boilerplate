@@ -7,10 +7,10 @@ import StockStrategy from '../../components/trade/stock/strategy/StockStrategy';
 const TradePanel = () => (
   <main>
     <Switch>
-      <Route path="/trade/stock/basic" component={StockBasic} />
-      <Route path="/trade/stock/algorithm" component={StockAlgorithm} />
-      <Route path="/trade/stock/strategy" component={StockStrategy} />
-      <Redirect to="/trade/stock/basic" />
+      <Route path='/trade/stock/basic' component={StockBasic} />
+      <Route path='/trade/stock/algorithm' component={StockAlgorithm} />
+      <Route path='/trade/stock/strategy' component={StockStrategy} />
+      <Redirect to='/trade/stock/basic' />
     </Switch>
   </main>
 );
