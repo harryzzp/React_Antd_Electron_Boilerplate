@@ -1,7 +1,7 @@
 {
   "main": "main.js",
   "homepage": ".",
-  "DEV": false,
+  "DEV": true,
   "name": "miner",
   "version": "0.1.0",
   "private": true,
