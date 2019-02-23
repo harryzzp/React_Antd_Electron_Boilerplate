@@ -34,7 +34,10 @@ yarn package
 ```
 
 # NPM升级管理
-本项目使用yarn管理升级依赖组件。
+本项目使用yarn管理升级依赖组件。执行如下命令选择升级组件。
+```
+yarn upgrade-interactive --latest
+```
 
 # 开发流程
 本章节除非想一步步安装，否则无须执行。
