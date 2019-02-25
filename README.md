@@ -1,5 +1,5 @@
 # Miner
-Miner桌面客户端
+Miner Desktop Client
 
 # 安装运行
 下载代码
@@ -33,7 +33,7 @@ yarn build
 yarn package
 ```
 
-# NPM升级管理
+# 组件升级管理
 本项目使用yarn管理升级依赖组件。执行如下命令选择升级组件。
 ```
 yarn upgrade-interactive --latest
