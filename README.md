@@ -215,3 +215,4 @@ yarn estart
 # 参考
 [Electron+React+Ant-Design 构建初始化应用](https://blog.csdn.net/yanlovehan/article/details/83067536)，
 [antd中按需加载使用react-app-rewired报错](https://segmentfault.com/q/1010000017794269/a-1020000017860037)
+[React + Redux - User Registration and Login Tutorial & Example](https://github.com/cornflourblue/react-redux-registration-login-example)
