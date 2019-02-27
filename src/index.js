@@ -1,16 +1,30 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './pages/App';
-import * as serviceWorker from './serviceWorker';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// ReactDOM.render(<MainRouter />, document.getElementById('root'));
+import './index.css';
+import App from './components/App';
+import * as serviceWorker from './serviceWorker';
+import * as reducers from './reducers/user';
+
+const reducer = combineReducers(Object.assign({}, reducers, {}));
+
+const enhancer = compose(
+  // Middleware you want to use in development:
+  applyMiddleware(thunkMiddleware)
+);
+
+// Note: passing enhancer as the last argument requires redux@>=3.1.0
+const store = createStore(reducer, enhancer);
+
 render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+  <div>
+      <App />
+    </div>
+  </Provider>,
   document.getElementById('root')
 );
 
