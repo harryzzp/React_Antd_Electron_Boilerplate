@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const API = 'https://hn.algolia.com/api/v1/search?query=';
 const DEFAULT_QUERY = 'redux';
 
-class Home extends Component {
+class Dashboard extends Component {
   constructor(props) {
     super(props);
 
@@ -50,4 +50,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Dashboard;
