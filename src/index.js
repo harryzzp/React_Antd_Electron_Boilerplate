@@ -21,7 +21,7 @@ const store = createStore(reducer, enhancer);
 
 render(
   <Provider store={store}>
-  <div>
+    <div>
       <App />
     </div>
   </Provider>,
