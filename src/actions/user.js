@@ -5,7 +5,7 @@ export const login = data => dispatch => {
     type: constants.USER_LOGGING_IN
   });
   // Wait 2 seconds before "logging in"
-  console.log('login data: ', data)
+  console.log('login user info: ', data);
   setTimeout(() => {
     dispatch({
       type: constants.USER_LOGGED_IN,
@@ -15,8 +15,7 @@ export const login = data => dispatch => {
 };
 
 export function logout() {
-  console.log('log out user: ')
-
+  console.log('log out user!!! ');
   return {
     type: constants.USER_LOGGED_OUT
   };

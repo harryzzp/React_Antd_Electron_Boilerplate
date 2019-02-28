@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Form, Icon, Input, Button } from 'antd';
 import { login } from '../actions/user';
 import PropTypes from 'prop-types';
 import './Login.css'
@@ -21,7 +21,6 @@ export class LoginContainer extends Component {
         });
       }
     });
-    
   }
 
   render() {
@@ -53,4 +52,4 @@ export class LoginContainer extends Component {
   }
 }
 
-export default connect(null, { login })(Form.create({ name: 'normal_login' })(LoginContainer));
+export default connect(null, { login })(Form.create()(LoginContainer));
