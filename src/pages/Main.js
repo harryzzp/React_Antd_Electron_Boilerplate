@@ -12,7 +12,6 @@ const Main = () => (
       <Route path="/trade" component={Trade} />
       <Route path="/strategy" component={Strategy} />
       <Route path="/gateway" component={Gateway} />
-      <Redirect to="/dashboard" />
     </Switch>
   </main>
 );

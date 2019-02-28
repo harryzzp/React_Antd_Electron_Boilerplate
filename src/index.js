@@ -7,7 +7,7 @@ import thunkMiddleware from 'redux-thunk';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import * as reducers from './reducers/user';
+import * as reducers from './reducers';
 
 const reducer = combineReducers(Object.assign({}, reducers, {}));
 

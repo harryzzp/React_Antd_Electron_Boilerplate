@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import styles from './App.css'
-import { login } from '../actions/user'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import styles from './App.css';
+import { login } from '../actions/user';
+import PropTypes from 'prop-types';
 
 export class LoginContainer extends Component {
 
