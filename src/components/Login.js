@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Form, Icon, Input, Button } from 'antd';
+import { Form, Icon, Input, Button, Row, Col } from 'antd';
 import { login } from '../actions/user';
 import PropTypes from 'prop-types';
 import './Login.css'
@@ -27,6 +27,11 @@ export class LoginContainer extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
+      <div>
+
+      <Row>
+      <Col span={8}></Col>
+      <Col span={8}>
       <Form onSubmit={this.handleSubmit} className='login-form'>
         <Form.Item>
           {getFieldDecorator('username', {
@@ -44,10 +49,15 @@ export class LoginContainer extends Component {
         </Form.Item>
         <Form.Item>
           <Button type='primary' htmlType='submit' className='login-form-button'>
-            Log in
+            登 录
           </Button>
         </Form.Item>
       </Form>
+      </Col>
+      <Col span={8}></Col>
+    </Row>
+      
+      </div>
     );
   }
 }

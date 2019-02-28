@@ -4,14 +4,14 @@ export const login = data => dispatch => {
   dispatch({
     type: constants.USER_LOGGING_IN
   });
-  // Wait 2 seconds before "logging in"
+  // Wait 0.5 seconds before "logging in"
   console.log('login user info: ', data);
   setTimeout(() => {
     dispatch({
       type: constants.USER_LOGGED_IN,
       payload: data
     });
-  }, 1000);
+  }, 500);
 };
 
 export function logout() {
