@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { Layout, Menu, Icon } from 'antd';
 import 'antd/dist/antd.css';
 
 const { Header } = Layout;
 
-const Navigator = () => (
+const Navigator = ({ authData }) => (
   <Header className='header'>
     <div className='logo' />
     <Menu theme='dark' mode='horizontal' style={{ lineHeight: '64px' }}>
@@ -33,8 +34,14 @@ const Navigator = () => (
           配置
         </Link>
       </Menu.Item>
+      <Menu.Item key='0' style={{ float: 'right' }}>
+        <Link to='/login'>
+          <Icon type='logout' />
+          {`欢迎 ${authData.username}`}
+        </Link>
+      </Menu.Item>
     </Menu>
   </Header>
 );
 
-export default Navigator;
+export default connect(state => ({ authData: state.user.data }))(Navigator);
