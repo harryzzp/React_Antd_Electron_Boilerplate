@@ -28,38 +28,36 @@ export class LoginContainer extends Component {
 
     return (
       <div>
-
-      <Row type="flex" justify="space-around" align="middle">
-      <Col span={8}></Col>
-      <Col span={8}>
-        <div style={{ marginTop: '30vh', textAlign: 'center' }}>
-          <p>Miner</p>
-        </div>
-        <Form onSubmit={this.handleSubmit} className='login-form'>
-          <Form.Item>
-            {getFieldDecorator('username', {
-              rules: [{ required: true, message: '请输入你的用户名!' }],
-            })(
-              <Input prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder='用户名'/>
-            )}
-          </Form.Item>
-          <Form.Item>
-            {getFieldDecorator('password', {
-              rules: [{ required: true, message: '请输入密码!' }],
-            })(
-              <Input prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />} type='password' placeholder='密码' />
-            )}
-          </Form.Item>
-          <Form.Item>
-            <Button type='primary' htmlType='submit' className='login-form-button'>
-              登 录
-            </Button>
-          </Form.Item>
-        </Form>
-      </Col>
-      <Col span={8}></Col>
-    </Row>
-      
+        <Row type="flex" justify="space-around" align="middle">
+          <Col span={10}></Col>
+          <Col span={4}>
+            <div style={{ marginTop: '30vh', textAlign: 'center' }}>
+              <p>Miner</p>
+            </div>
+            <Form onSubmit={this.handleSubmit} className='login-form'>
+              <Form.Item>
+                {getFieldDecorator('username', {
+                  rules: [{ required: true, message: '请输入你的用户名!' }],
+                })(
+                  <Input prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder='用户名'/>
+                )}
+              </Form.Item>
+              <Form.Item>
+                {getFieldDecorator('password', {
+                  rules: [{ required: true, message: '请输入密码!' }],
+                })(
+                  <Input prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />} type='password' placeholder='密码' />
+                )}
+              </Form.Item>
+              <Form.Item>
+                <Button type='primary' htmlType='submit' className='login-form-button'>
+                  登 录
+                </Button>
+              </Form.Item>
+            </Form>
+          </Col>
+          <Col span={10}></Col>
+        </Row>
       </div>
     );
   }
