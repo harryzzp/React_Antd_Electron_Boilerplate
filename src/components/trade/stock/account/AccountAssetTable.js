@@ -15,9 +15,9 @@ export default class AccountAssetTable extends Component {
     const tempData = [
       {
         key: '1',
-        name: 'John Brown',
+        name: '徐翔',
         age: 32,
-        address: 'New York'
+        address: '11007576'
       },
       {
         key: '2',

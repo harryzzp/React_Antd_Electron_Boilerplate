@@ -11,13 +11,22 @@ export function socketListen(action) {
     try {
       const tmpHostname = window.location.hostname;
       // const tmpPort = window.location.port-1
-      const tmpPort = 9098;
+      const tmpPort = 9093;
       socket = io.connect(
         `${tmpHostname}:${tmpPort}?token=${sessionStorage.getItem('token')}`,
         {
           transports: ['websocket']
         }
       );
+
+      socket.on('time', timestamp => action(null, timestamp));
+
+      // socket.on('time', data => {
+      //   action({
+      //     type: 'time',
+      //     payload: data
+      //   });
+      // });
 
       socket.on('E_TICKS|', data => {
         action({

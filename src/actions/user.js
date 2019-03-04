@@ -11,7 +11,7 @@ export const login = data => dispatch => {
       type: constants.USER_LOGGED_IN,
       payload: data
     });
-  }, 1000);
+  }, 500);
 };
 
 export function logout() {

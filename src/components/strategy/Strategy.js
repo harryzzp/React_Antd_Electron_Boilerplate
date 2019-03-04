@@ -3,12 +3,23 @@ import { LocaleProvider, DatePicker, Alert, Button, Tabs, message } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import moment from 'moment';
 import { StickyContainer, Sticky } from 'react-sticky';
+import {socketListen} from '../../services/socketApi';
 
 const TabPane = Tabs.TabPane;
 
 moment.locale('zh-cn');
 
 class Strategy extends Component {
+
+  constructor(props) {
+    super(props);
+    socketListen((err, timestamp) =>
+      this.setState({
+        timestamp
+      })
+    );
+  }
+
   state = {
     date: null
   };

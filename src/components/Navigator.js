@@ -7,24 +7,34 @@ import 'antd/dist/antd.css';
 import { logout } from '../actions/user';
 
 const { Header } = Layout;
+const SubMenu = Menu.SubMenu;
 
 const Navigator = ({ authData, logout }) => {
   return (
-    <Header className='header'>
+    <Header className='header' style={{ background: '#fff' }}>
       <div className='logo' />
-      <Menu theme='dark' mode='horizontal' style={{ lineHeight: '64px' }}>
+      <Menu theme='light' mode='horizontal' style={{ lineHeight: '64px' }}>
         <Menu.Item key='1'>
           <Link to='/trade'>
             <Icon type='dashboard' />
             交易
           </Link>
         </Menu.Item>
-        <Menu.Item key='2'>
-          <Link to='/strategy'>
-            <Icon type='form' />
-            策略
-          </Link>
-        </Menu.Item>
+        <SubMenu
+          title={
+            <span>
+              <Icon type='form' />
+              策略
+            </span>
+          }
+        >
+          <Menu.Item key='setting:1'>
+            <Link to='/strategy'>TWAP</Link>
+          </Menu.Item>
+          <Menu.Item key='setting:2'>
+            <Link to='/strategy'>VWAP</Link>
+          </Menu.Item>
+        </SubMenu>
         <Menu.Item key='3'>
           <Link to='/gateway'>
             <Icon type='api' />
