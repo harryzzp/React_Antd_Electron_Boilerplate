@@ -21,7 +21,8 @@ class Strategy extends Component {
   }
 
   state = {
-    date: null
+    date: null,
+    timestamp: 'no timestamp yet'
   };
   handleChange = date => {
     message.info(`您选择的日期是: ${date.format('YYYY-MM-DD')}`);
@@ -47,6 +48,9 @@ class Strategy extends Component {
           <div style={{ width: 400, margin: '100px auto' }}>
             <DatePicker onChange={this.handleChange} />
             <div style={{ marginTop: 20 }}>
+            <p className='App-intro'>
+              This is the timer value: {this.state.timestamp}
+            </p>
               <Alert
                 message={`当前日期：${
                   date ? date.format('YYYY-MM-DD') : '未选择'
