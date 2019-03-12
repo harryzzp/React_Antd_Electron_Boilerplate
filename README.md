@@ -1,10 +1,10 @@
-# Miner
-Miner Desktop Client
+# React_Antd_Electron_Boilerplate
+一个Electron React Ant Design样板脚手架
 
 # 安装运行
 下载代码
 ```
-git clone https://github.com/harryzzp/miner.git
+git clone https://github.com/harryzzp/React_Antd_Electron_Boilerplate.git
 ```
 安装依赖
 ```
